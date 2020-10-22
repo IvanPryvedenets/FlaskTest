@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Stories page</h1>
+    <div class="container" style="height: 300px">
+        {% for story in stories %}
+            <p>
+                <a href="{{ url_for('story', slug=story.slug) }}">{{ story.title }}</a>
+            </p>
+        {% endfor %}
+    </div>
+
+    <div class="container">
+
+        <h5>If you want:</h5>
+        <a href="{{ url_for('create_story') }}" class="btn btn-primary">Create story</a>
+        <a href="{{ url_for('create_tag') }}" class="btn btn-primary">Create tag</a>
+
+    </div>
+{% endblock %}

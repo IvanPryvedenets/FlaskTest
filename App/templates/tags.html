@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Tag page</h1>
+
+    <div class="container">
+
+        {% for tag in tags %}
+            <a href="{{ url_for('tag', slug=tag.slug) }}"><span class="badge badge-warning">{{ tag.name }}</span></a>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

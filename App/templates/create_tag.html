@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Let's start create Tag:</h1>
+    <div class="container" style="height: 300px">
+
+        <form action="{{ url_for('create_tag') }}" method="POST">
+
+            <div class="row">
+                <div class="col-sm-4">
+                    {% for field in form %}
+                        {{ field.label() }}
+                        {{ field(class='form-control') }}
+                    <br>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+
+
+        </form>
+
+    </div>
+{% endblock %}

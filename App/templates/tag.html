@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Stories follow to "{{ tag.name }}" tag:</h1>
+    <div class="container" style="height: 300px">
+
+        {% for story in stories %}
+            <p>
+                <h4><a href="{{ url_for('story', slug=story.slug) }}">{{ story.title }}</a></h4>
+                <h6>{{ story.body }}</h6>
+            </p>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

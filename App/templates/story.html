@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ story.title }}</h1>
+    <div class="container" style="height: 300px">
+
+        <p>{{ story.body }}</p>
+
+    </div>
+
+    {% if tags %}
+        <div class="container">
+
+            <h5>Follow to tags and read similar:</h5>
+            {% for tag in tags %}
+                <a href="{{ url_for('tag', slug=tag.slug) }}"><span class="badge badge-warning">{{ tag.name }}</span></a>
+            {% endfor %}
+
+        </div>
+    {% endif %}
+
+{% endblock %}

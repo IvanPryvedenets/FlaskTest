@@ -1,0 +1,8 @@
+Collecting freeze
+  Downloading freeze-3.0.tar.gz (188 kB)
+Requirement already satisfied: six in /home/ivan/PycharmProjects/bot/FlaskTest/lib/python3.6/site-packages (from freeze) (1.15.0)
+Using legacy 'setup.py install' for freeze, since package 'wheel' is not installed.
+Installing collected packages: freeze
+    Running setup.py install for freeze: started
+    Running setup.py install for freeze: finished with status 'done'
+Successfully installed freeze-3.0
